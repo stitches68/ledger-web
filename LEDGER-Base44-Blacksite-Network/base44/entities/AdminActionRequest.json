@@ -1,0 +1,41 @@
+{
+  "name": "AdminActionRequest",
+  "type": "object",
+  "properties": {
+    "actorUserId": {
+      "type": "string"
+    },
+    "actorDiscordId": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "resolvedAt": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

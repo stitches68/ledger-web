@@ -1,0 +1,302 @@
+[
+  {
+    "id": "hush9",
+    "name": "HUSH-9",
+    "category": "SIDEARM",
+    "desc": "Suppressed compact pistol",
+    "cost": 420,
+    "damage": 19,
+    "rate": 4,
+    "utility": 7
+  },
+  {
+    "id": "blacktalon",
+    "name": "BLACKTALON",
+    "category": "SIDEARM",
+    "desc": "Heavy revolver",
+    "cost": 750,
+    "damage": 33,
+    "rate": 2,
+    "utility": 4
+  },
+  {
+    "id": "viper",
+    "name": "VIPER",
+    "category": "SIDEARM",
+    "desc": "Burst-fire sidearm",
+    "cost": 610,
+    "damage": 26,
+    "rate": 5,
+    "utility": 8
+  },
+  {
+    "id": "spark",
+    "name": "SPARK",
+    "category": "SIDEARM",
+    "desc": "Pulse sidearm",
+    "cost": 840,
+    "damage": 29,
+    "rate": 4,
+    "utility": 5
+  },
+  {
+    "id": "rook",
+    "name": "ROOK-17",
+    "category": "ASSAULT",
+    "desc": "Modular assault rifle",
+    "cost": 990,
+    "damage": 44,
+    "rate": 10,
+    "utility": 8
+  },
+  {
+    "id": "marauder",
+    "name": "MARAUDER",
+    "category": "ASSAULT",
+    "desc": "Armor piercing carbine",
+    "cost": 1350,
+    "damage": 57,
+    "rate": 8,
+    "utility": 7
+  },
+  {
+    "id": "jackal",
+    "name": "JACKAL-4",
+    "category": "ASSAULT",
+    "desc": "Close-range battle rifle",
+    "cost": 1150,
+    "damage": 52,
+    "rate": 9,
+    "utility": 9
+  },
+  {
+    "id": "corvus",
+    "name": "CORVUS",
+    "category": "ASSAULT",
+    "desc": "Heavy battle rifle",
+    "cost": 1690,
+    "damage": 69,
+    "rate": 6,
+    "utility": 5
+  },
+  {
+    "id": "spectre",
+    "name": "SPECTRE-A",
+    "category": "ASSAULT",
+    "desc": "Low-signature carbine",
+    "cost": 1950,
+    "damage": 63,
+    "rate": 8,
+    "utility": 11
+  },
+  {
+    "id": "frenzy",
+    "name": "FRENZY",
+    "category": "ASSAULT",
+    "desc": "High-speed auto rifle",
+    "cost": 1490,
+    "damage": 60,
+    "rate": 14,
+    "utility": 7
+  },
+  {
+    "id": "cobalt",
+    "name": "COBALT",
+    "category": "SMG",
+    "desc": "Compact machine pistol",
+    "cost": 800,
+    "damage": 31,
+    "rate": 15,
+    "utility": 13
+  },
+  {
+    "id": "swarm",
+    "name": "SWARM",
+    "category": "SMG",
+    "desc": "Twin-feed PDW",
+    "cost": 1100,
+    "damage": 38,
+    "rate": 18,
+    "utility": 12
+  },
+  {
+    "id": "grin",
+    "name": "GRIN",
+    "category": "SMG",
+    "desc": "Integral suppressor PDW",
+    "cost": 1400,
+    "damage": 35,
+    "rate": 17,
+    "utility": 15
+  },
+  {
+    "id": "breach",
+    "name": "BREACH-12",
+    "category": "SHOTGUN",
+    "desc": "Semi-auto breaching shotgun",
+    "cost": 950,
+    "damage": 67,
+    "rate": 3,
+    "utility": 6
+  },
+  {
+    "id": "maw",
+    "name": "MAW",
+    "category": "SHOTGUN",
+    "desc": "Heavy drum shotgun",
+    "cost": 1950,
+    "damage": 92,
+    "rate": 4,
+    "utility": 3
+  },
+  {
+    "id": "cinder12",
+    "name": "CINDER-12",
+    "category": "SHOTGUN",
+    "desc": "Thermal assault shotgun",
+    "cost": 2200,
+    "damage": 97,
+    "rate": 6,
+    "utility": 4
+  },
+  {
+    "id": "eye",
+    "name": "DEADEYE",
+    "category": "MARKSMAN",
+    "desc": "Long-range marksman rifle",
+    "cost": 1320,
+    "damage": 87,
+    "rate": 3,
+    "utility": 5
+  },
+  {
+    "id": "longglass",
+    "name": "LONGGLASS",
+    "category": "MARKSMAN",
+    "desc": "Precision anti-materiel rifle",
+    "cost": 2600,
+    "damage": 145,
+    "rate": 2,
+    "utility": 2
+  },
+  {
+    "id": "quietus",
+    "name": "QUIETUS",
+    "category": "MARKSMAN",
+    "desc": "Suppressed bolt-action rifle",
+    "cost": 2200,
+    "damage": 116,
+    "rate": 2,
+    "utility": 6
+  },
+  {
+    "id": "watcher",
+    "name": "WATCHER",
+    "category": "MARKSMAN",
+    "desc": "Designated marksman system",
+    "cost": 1690,
+    "damage": 92,
+    "rate": 5,
+    "utility": 8
+  },
+  {
+    "id": "hammer",
+    "name": "HAMMER",
+    "category": "HEAVY",
+    "desc": "Belt-fed machine gun",
+    "cost": 2800,
+    "damage": 120,
+    "rate": 17,
+    "utility": 1
+  },
+  {
+    "id": "sundown",
+    "name": "SUNDOWN",
+    "category": "HEAVY",
+    "desc": "Portable rail cannon",
+    "cost": 5100,
+    "damage": 203,
+    "rate": 1,
+    "utility": 0
+  },
+  {
+    "id": "ember",
+    "name": "EMBER",
+    "category": "HEAVY",
+    "desc": "Incendiary launcher",
+    "cost": 2750,
+    "damage": 135,
+    "rate": 4,
+    "utility": 3
+  },
+  {
+    "id": "rampart",
+    "name": "RAMPART",
+    "category": "HEAVY",
+    "desc": "Auto grenade launcher",
+    "cost": 3100,
+    "damage": 160,
+    "rate": 3,
+    "utility": 1
+  },
+  {
+    "id": "harrow",
+    "name": "HARROW",
+    "category": "HEAVY",
+    "desc": "Anti-armor launcher",
+    "cost": 4800,
+    "damage": 215,
+    "rate": 1,
+    "utility": 0
+  },
+  {
+    "id": "lifekit",
+    "name": "LIFEKIT",
+    "category": "SUPPORT",
+    "desc": "Field trauma pack",
+    "cost": 1200,
+    "damage": 10,
+    "rate": 1,
+    "utility": 18
+  },
+  {
+    "id": "nanomed",
+    "name": "NANOMED",
+    "category": "SUPPORT",
+    "desc": "Combat medical dispenser",
+    "cost": 2550,
+    "damage": 8,
+    "rate": 2,
+    "utility": 30
+  },
+  {
+    "id": "recon",
+    "name": "GHOSTLINK",
+    "category": "SUPPORT",
+    "desc": "Advanced recon scanner",
+    "cost": 1800,
+    "damage": 13,
+    "rate": 4,
+    "utility": 22
+  },
+  {
+    "id": "drone",
+    "name": "WIDOW",
+    "category": "SUPPORT",
+    "desc": "Portable sentry drone",
+    "cost": 2200,
+    "damage": 71,
+    "rate": 7,
+    "utility": 7
+  },
+  {
+    "id": "signal",
+    "name": "BLACKBOX",
+    "category": "SUPPORT",
+    "desc": "Encrypted command relay",
+    "cost": 2750,
+    "damage": 18,
+    "rate": 3,
+    "utility": 26
+  }
+]

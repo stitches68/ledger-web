@@ -1,0 +1,25 @@
+{
+  "name": "DiscordOAuthState",
+  "type": "object",
+  "properties": {
+    "stateHash": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "type": "string"
+    },
+    "usedAt": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

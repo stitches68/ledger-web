@@ -1,0 +1,31 @@
+{
+  "name": "BlacksiteAnnouncement",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "authorDiscordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

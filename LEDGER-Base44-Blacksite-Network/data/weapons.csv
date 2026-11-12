@@ -1,0 +1,31 @@
+id,name,category,desc,cost,damage,rate,utility
+hush9,HUSH-9,SIDEARM,Suppressed compact pistol,420,19,4,7
+blacktalon,BLACKTALON,SIDEARM,Heavy revolver,750,33,2,4
+viper,VIPER,SIDEARM,Burst-fire sidearm,610,26,5,8
+spark,SPARK,SIDEARM,Pulse sidearm,840,29,4,5
+rook,ROOK-17,ASSAULT,Modular assault rifle,990,44,10,8
+marauder,MARAUDER,ASSAULT,Armor piercing carbine,1350,57,8,7
+jackal,JACKAL-4,ASSAULT,Close-range battle rifle,1150,52,9,9
+corvus,CORVUS,ASSAULT,Heavy battle rifle,1690,69,6,5
+spectre,SPECTRE-A,ASSAULT,Low-signature carbine,1950,63,8,11
+frenzy,FRENZY,ASSAULT,High-speed auto rifle,1490,60,14,7
+cobalt,COBALT,SMG,Compact machine pistol,800,31,15,13
+swarm,SWARM,SMG,Twin-feed PDW,1100,38,18,12
+grin,GRIN,SMG,Integral suppressor PDW,1400,35,17,15
+breach,BREACH-12,SHOTGUN,Semi-auto breaching shotgun,950,67,3,6
+maw,MAW,SHOTGUN,Heavy drum shotgun,1950,92,4,3
+cinder12,CINDER-12,SHOTGUN,Thermal assault shotgun,2200,97,6,4
+eye,DEADEYE,MARKSMAN,Long-range marksman rifle,1320,87,3,5
+longglass,LONGGLASS,MARKSMAN,Precision anti-materiel rifle,2600,145,2,2
+quietus,QUIETUS,MARKSMAN,Suppressed bolt-action rifle,2200,116,2,6
+watcher,WATCHER,MARKSMAN,Designated marksman system,1690,92,5,8
+hammer,HAMMER,HEAVY,Belt-fed machine gun,2800,120,17,1
+sundown,SUNDOWN,HEAVY,Portable rail cannon,5100,203,1,0
+ember,EMBER,HEAVY,Incendiary launcher,2750,135,4,3
+rampart,RAMPART,HEAVY,Auto grenade launcher,3100,160,3,1
+harrow,HARROW,HEAVY,Anti-armor launcher,4800,215,1,0
+lifekit,LIFEKIT,SUPPORT,Field trauma pack,1200,10,1,18
+nanomed,NANOMED,SUPPORT,Combat medical dispenser,2550,8,2,30
+recon,GHOSTLINK,SUPPORT,Advanced recon scanner,1800,13,4,22
+drone,WIDOW,SUPPORT,Portable sentry drone,2200,71,7,7
+signal,BLACKBOX,SUPPORT,Encrypted command relay,2750,18,3,26

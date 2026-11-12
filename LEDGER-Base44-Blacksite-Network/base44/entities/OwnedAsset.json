@@ -1,0 +1,78 @@
+{
+  "name": "OwnedAsset",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "catalogId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "trimColor": {
+      "type": "string"
+    },
+    "quality": {
+      "type": "string"
+    },
+    "qualityMultiplier": {
+      "type": "number"
+    },
+    "hull": {
+      "type": "number"
+    },
+    "firepower": {
+      "type": "number"
+    },
+    "shields": {
+      "type": "number"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "income": {
+      "type": "number"
+    },
+    "weaponId": {
+      "type": "string"
+    },
+    "components": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "planetId": {
+      "type": "string"
+    },
+    "lastTickAt": {
+      "type": "string"
+    },
+    "damage": {
+      "type": "number"
+    },
+    "xp": {
+      "type": "number"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

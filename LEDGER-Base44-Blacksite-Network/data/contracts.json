@@ -1,0 +1,42 @@
+[
+  {
+    "id": "grim-rescue",
+    "title": "Graveyard Shift",
+    "type": "RESCUE",
+    "description": "Extract stranded assets and secure the evacuation corridor.",
+    "baseReward": 750,
+    "bonus": "Recover two wounded units +250",
+    "missionTarget": 3,
+    "repeatable": true
+  },
+  {
+    "id": "black-harvest",
+    "title": "Black Harvest",
+    "type": "SALVAGE",
+    "description": "Recover high-value materiel before the planetary frontline shifts.",
+    "baseReward": 1200,
+    "bonus": "No asset losses +300",
+    "missionTarget": 5,
+    "repeatable": true
+  },
+  {
+    "id": "fallen-star",
+    "title": "Fallen Star",
+    "type": "RECON",
+    "description": "Confirm the fate of a missing squad and transmit their coordinates.",
+    "baseReward": 500,
+    "bonus": "Ghost route +150",
+    "missionTarget": 1,
+    "repeatable": false
+  },
+  {
+    "id": "supply-line",
+    "title": "Ghost Convoy",
+    "type": "LOGISTICS",
+    "description": "Escort the unsigned cargo manifests through contested space.",
+    "baseReward": 1000,
+    "bonus": "No cargo losses +200",
+    "missionTarget": 4,
+    "repeatable": true
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "name": "LedgerMirrorCache",
+  "type": "object",
+  "properties": {
+    "cacheKey": {
+      "type": "string"
+    },
+    "guildId": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "fetchedAt": {
+      "type": "string"
+    },
+    "lastError": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

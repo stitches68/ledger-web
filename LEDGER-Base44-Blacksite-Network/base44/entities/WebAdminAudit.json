@@ -1,0 +1,32 @@
+{
+  "name": "WebAdminAudit",
+  "type": "object",
+  "properties": {
+    "actorUserId": {
+      "type": "string"
+    },
+    "actorDiscordId": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

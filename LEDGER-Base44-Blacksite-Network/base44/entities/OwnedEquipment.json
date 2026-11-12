@@ -1,0 +1,27 @@
+{
+  "name": "OwnedEquipment",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "catalogId": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

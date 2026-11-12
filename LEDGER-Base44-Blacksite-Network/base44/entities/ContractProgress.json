@@ -1,0 +1,33 @@
+{
+  "name": "ContractProgress",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "contractId": {
+      "type": "string"
+    },
+    "completed": {
+      "type": "number"
+    },
+    "cycle": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    },
+    "earned": {
+      "type": "number"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

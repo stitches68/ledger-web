@@ -1,0 +1,43 @@
+{
+  "name": "PlanetSnapshot",
+  "type": "object",
+  "properties": {
+    "planetId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "players": {
+      "type": "number"
+    },
+    "liberation": {
+      "type": "number"
+    },
+    "positionX": {
+      "type": "number"
+    },
+    "positionY": {
+      "type": "number"
+    },
+    "capturedAt": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": true,
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "DeploymentLog",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "assetId": {
+      "type": "string"
+    },
+    "planetId": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "reward": {
+      "type": "number"
+    },
+    "damage": {
+      "type": "number"
+    },
+    "xp": {
+      "type": "number"
+    },
+    "executedAt": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

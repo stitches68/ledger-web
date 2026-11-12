@@ -1,0 +1,25 @@
+id,name,slot,cost,firepower,hull,shields,speed,income,desc
+railburst,Railburst Array,WEAPON,2500,28,0,0,0,1,Accelerator cannons. +28 firepower.
+coil,Coilcaster Batteries,WEAPON,1850,19,0,0,0,1,Pulse coils with high penetration.
+flechette,Flechette Cloud,WEAPON,1350,12,0,0,5,1,Point defense and proximity denial.
+longbow,Longbow Missile Rack,WEAPON,4400,41,0,0,-5,2,Extended-range guided kinetic salvos.
+hellion,Hellion Plasma Lance,WEAPON,6800,62,0,0,-8,3,A dangerous weapon that asks no questions.
+cinder,Cinder Flamestorm,WEAPON,2200,25,0,0,-2,2,Close combat thermal saturation.
+bulwark,Bulwark Field,SHIELD,2900,0,0,57,-4,1,Layered shield reinforcement.
+phase,Phase Veil,SHIELD,4600,0,0,84,5,2,Probabilistic deflection lattice.
+citadel_field,Citadel Shield,SHIELD,7600,0,0,124,-9,3,Capital-grade field projector.
+guardian,Guardian Escort Screen,SHIELD,2400,0,20,45,0,2,Protects nearby evacuation craft.
+afterburner,Overburn Drive,ENGINE,2200,0,-4,0,18,1,Shorter exposure windows.
+ghostdrive,Ghostdrive,ENGINE,4100,0,0,0,27,2,Cuts the signature before moving.
+ion,Ion Splitter,ENGINE,6300,0,0,10,31,3,High-efficiency full burn.
+reactor,Blacksite Reactor,ENGINE,4900,10,0,20,12,3,Unauthorized reactor modifications.
+medbay,Trauma Bay,UTILITY,3200,0,40,12,0,3,Field surgical equipment and rescue links.
+smugglers,False Manifest,UTILITY,1700,0,0,0,0,6,Revenue from unsigned freight paperwork.
+salvage,Salvage Drones,UTILITY,2100,0,14,0,2,4,Collect useful things from bad outcomes.
+command,Tactical Uplink,UTILITY,4200,17,0,17,0,4,Battlenet routing and command bonuses.
+reclaimer,Reclaimer Rig,UTILITY,5500,10,30,25,-3,5,Extends survivability and salvage yield.
+blackbox,Blackbox Broker,UTILITY,8200,0,0,0,0,9,Extra unofficial mission income.
+armorplate,Ceramic Plating,ARMOR,1300,0,47,0,-5,1,Extra hull resilience.
+ablative,Ablative Shell,ARMOR,2800,0,87,0,-8,1,Absorbs the first volley.
+adaptive,Adaptive Armor,ARMOR,5500,0,111,20,0,3,Reactive panels and smart seams.
+medarmor,Med-evac Reinforcement,ARMOR,2400,0,58,20,2,3,Survivability and cargo-access modifications.

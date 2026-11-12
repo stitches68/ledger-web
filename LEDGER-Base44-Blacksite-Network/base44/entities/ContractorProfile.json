@@ -1,0 +1,63 @@
+{
+  "name": "ContractorProfile",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "callsign": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "motto": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "accent": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "discordId": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "webCredits": {
+      "type": "number"
+    },
+    "webEarned": {
+      "type": "number"
+    },
+    "pendingCredits": {
+      "type": "number"
+    },
+    "kills": {
+      "type": "number"
+    },
+    "stims": {
+      "type": "number"
+    },
+    "completedContracts": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.userId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

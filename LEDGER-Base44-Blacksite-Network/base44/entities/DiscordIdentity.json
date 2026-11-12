@@ -1,0 +1,37 @@
+{
+  "name": "DiscordIdentity",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "discordId": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "globalName": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "linkedAt": {
+      "type": "string"
+    },
+    "lastVerifiedAt": {
+      "type": "string"
+    },
+    "guildId": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Server-only LEDGER Discord integration record. All access through authenticated functions."
+}

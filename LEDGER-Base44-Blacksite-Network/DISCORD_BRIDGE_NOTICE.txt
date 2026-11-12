@@ -1,0 +1,12 @@
+LEDGER BASE44: Discord Connection Status
+
+Implemented: OAuth Discord account linking, live guild role verification, LEDGER-role-restricted staff console,
+read-only published contracts/leaderboards/shop messages, website announcements, manual admin queue.
+
+Not possible without a secure shared API/bridge to the existing Railway bot:
+- Automatically showing the authoritative real Discord SQLite credit balance.
+- Editing the real Discord bot's contract/shop/unit/mentor database through Base44.
+- Executing slash commands on the Discord bot from a different bot or website.
+
+Your Discord bot code is UNCHANGED. The website is a separate Base44 project.
+See docs/DISCORD_OAUTH_AND_LIVE_SYNC.md and docs/REAL_BOT_BRIDGE_SPEC.md.

@@ -1,0 +1,35 @@
+id,name,category,role,cost,hull,firepower,shields,speed,income,desc
+ghostknife,Ghostknife,FIGHTER,Light interceptor,1800,85,55,25,95,3,"Fast, cheap, dangerous in numbers."
+wraith,Wraith-7,FIGHTER,Stealth fighter,3600,90,72,48,93,6,Cold-running drives and radar-absorbent plating.
+shrike,Shrike,FIGHTER,Medium fighter,3100,120,80,48,80,5,Multi-role patrol craft and convoy escort.
+basilisk,Basilisk,FIGHTER,Heavy fighter,4900,185,113,67,61,7,Heavy guns; no interest in maneuverability.
+lancer,Lancer,FIGHTER,Space superiority fighter,6800,135,130,62,89,8,High-output drive and lance arrays.
+nightglass,Nightglass,BOMBER,Stealth bomber,8000,160,170,76,60,10,Disappears until the payload drops.
+hammerfall,Hammerfall,BOMBER,Strategic bomber,10500,250,220,86,42,12,Long-range suppression with terrifying payloads.
+vulture,Vulture,GUNSHIP,Assault gunship,7200,230,152,68,65,9,"Low orbit to ground, then back again."
+scorpion,Scorpion,GUNSHIP,Anti-armor gunship,9000,260,195,78,54,10,Built around a rotating siege cannon.
+skyrend,Skyrend,DROPSHIP,Rapid insertion dropship,5100,170,55,70,87,8,Drop squads in and bring survivors out.
+lifeline,Lifeline,MEDICAL,Medevac dropship,6100,190,28,82,78,11,Armored triage and combat evacuation.
+aurora,Aurora,MEDICAL,Medical response frigate,16500,570,95,155,48,18,A surgical ward that fights its way home.
+mercy,Quiet Mercy,MEDICAL,Hospital ship,27000,820,76,210,32,26,The only thing more expensive than life is losing it.
+atlas,Atlas,TRANSPORT,Armored troop transport,7200,330,72,90,52,10,Carries an entire detachment into contact.
+wayfarer,Wayfarer,CARGO,Cargo freighter,8500,420,45,90,40,13,Unregistered holds and inconvenient manifests.
+mammoth,Mammoth,CARGO,Heavy logistics ship,16000,760,75,130,29,18,Carries everything the war forgot.
+strigoi,Strigoi,CORVETTE,Fast strike corvette,12000,540,185,135,74,14,Silent blockade runner and boarding craft.
+vaelora,Vaelora,CORVETTE,Blacksite recovery corvette,14500,640,165,165,69,17,Rescue-bay architecture and heavy escort guns.
+halberd,Halberd,CRUISER,Patrol cruiser,25500,1130,260,240,52,25,A border dispute with engines.
+eclipse,Eclipse,CRUISER,Stealth command cruiser,39000,1080,300,350,54,34,A command center the radar claims is empty.
+judicator,Judicator,BATTLESHIP,Siege battleship,62000,2400,550,500,24,44,"Mass, armor and the language of artillery."
+blackstar,Blackstar,BATTLESHIP,Dreadnought,89000,3200,760,690,18,60,A moving capital offense.
+gravewing,Gravewing,CARRIER,Light assault carrier,48000,1500,220,300,34,37,Launches the fight before anyone sees the ship.
+hollowstar,Hollowstar,CARRIER,Fleet aircraft carrier,94000,3100,480,650,22,67,"Four decks, several secrets and a private air force."
+citadel,Citadel Node,STATION,Combat orbital fortress,99000,3700,650,850,0,70,"Static by doctrine, formidable by design."
+sanctuary,Sanctuary Array,STATION,Orbital medical station,74000,2900,190,870,0,55,Protected trauma decks and long-range rescue.
+pilgrim,Pilgrim,STATION,Mobile hospital station,120000,3500,300,990,16,75,A city-sized hospital built to move.
+mastiff,Mastiff,ARMOR,Heavy battle tank,4500,340,150,38,25,7,"Steel tracks, full breach, no retreat."
+razorback,Razorback,ARMOR,Scout tank,2900,180,94,21,55,6,Fast enough to find trouble first.
+palisade,Palisade,ARMOR,Siege tank,7700,490,270,62,15,12,Indirect fire and hard cover breaker.
+contractors,Blacksite Contractors,MERCENARY,Rifle squad,850,60,42,5,63,2,"Six mercenaries, their kit and a nondisclosure agreement."
+ghosts,Ghost Team,MERCENARY,Recon squad,1600,72,80,12,84,4,They collect coordinates and leave no footprints.
+angels,Angel Trauma Team,MERCENARY,Combat medics,2000,96,45,20,63,6,Medical care delivered under suppressive fire.
+breachers,Jackal Breach Team,MERCENARY,Assault squad,2400,115,106,15,76,5,A specialist solution for locked doors.

@@ -1,0 +1,40 @@
+{
+  "name": "WebContract",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "baseReward": {
+      "type": "number"
+    },
+    "missionTarget": {
+      "type": "number"
+    },
+    "repeatable": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    },
+    "bonusRules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": true,
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

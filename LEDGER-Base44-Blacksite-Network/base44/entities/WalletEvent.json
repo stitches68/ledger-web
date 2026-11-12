@@ -1,0 +1,33 @@
+{
+  "name": "WalletEvent",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "balanceAfter": {
+      "type": "number"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite Network web app entity. Mutations through authenticated server functions only."
+}

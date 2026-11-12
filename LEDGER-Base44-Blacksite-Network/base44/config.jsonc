@@ -1,0 +1,13 @@
+{
+  "name": "ledger-blacksite-network",
+  "description": "Blacksite Network: PMC hangar, contracts, galaxy and dossier. Independent companion to LEDGER Discord.",
+  "visibility": "private",
+  "entitiesDir": "./entities",
+  "functionsDir": "./functions",
+  "site": {
+    "outputDirectory": "./dist",
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "serveCommand": "npm run dev"
+  }
+}
