@@ -38,6 +38,18 @@
     "pendingCredits": {
       "type": "number"
     },
+    "discordCredits": {
+      "type": "number"
+    },
+    "discordBalanceStatus": {
+      "type": "string"
+    },
+    "discordBalanceSyncedAt": {
+      "type": "string"
+    },
+    "discordBalanceNote": {
+      "type": "string"
+    },
     "kills": {
       "type": "number"
     },

@@ -12,6 +12,8 @@
 | Individual and unit store embeds | Read-only Discord REST mirror | Configure store channel IDs |
 | Refresh frequency | Browser polls every ~30 seconds, shared cache reduces Discord requests | Only while browser is open; may serve stale data |
 | Real Discord LEDGER wallet | **Unavailable** | The bot's SQLite DB is in a separate Railway volume |
+| Linked Discord balance display | Owner submits a claimed balance; an `AdminActionRequest` queues staff verification | Never reads or moves bot credits; staff must verify in Discord |
+| Unit hangar and shared web operations | Server-scoped by the self-declared profile unit label; shared progress from settled patrol cycles | Web simulation only; Discord unit roles verified separately by OAuth |
 | Discord bot administrative writes | **Unavailable** | Requires co-located authenticated API bridge or shared database |
 | Website staff actions | Publish website announcements, review web claims, queue/copy Discord staff commands | Implemented but needs live tests |
 | Discord member role revoked | Admin hub access denied on next role check | Must be tested on deployment |

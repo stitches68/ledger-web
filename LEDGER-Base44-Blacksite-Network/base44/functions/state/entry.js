@@ -27,6 +27,18 @@ Deno.serve(async function (req) {
       db.ContractorProfile.list('-webEarned',30),db.BlacksiteAnnouncement.list('-created_date',12)
     ]);
     const leaderboard = allProfiles.map(p=>({callsign:p.callsign,earned:p.webEarned||0,kills:p.kills||0,stims:p.stims||0,unit:p.unit||'—'}));
-    return Response.json({mode:'BASE44_WEB_WALLET',notice:'Web Blacksite Credits and simulated rewards are separate from Discord LEDGER. No direct wallet bridge is configured.',profile,owned,equipment,logs,progress,claims,history,leaderboard,announcements:announcements.filter(x=>x.active),catalog:{assets:ASSETS,mods:MODS,weapons:WEAPONS,contracts:CONTRACTS},now:new Date().toISOString()});
+    const unitName = profile.unit && profile.unit !== 'UNASSIGNED' ? profile.unit : '';
+    let unitMembers=[],unitFleet=[],unitOps=[];
+    if(unitName){
+      const [profiles,operations] = await Promise.all([
+        db.ContractorProfile.filter({unit:unitName}),
+        db.UnitOperation.filter({unit:unitName})
+      ]);
+      unitOps = operations;
+      unitMembers = profiles.map(m=>({callsign:m.callsign,specialty:m.specialty,unit:m.unit,webEarned:m.webEarned||0,kills:m.kills||0,stims:m.stims||0}));
+      const fleets = await Promise.all(profiles.slice(0,20).map(m=>db.OwnedAsset.filter({ownerId:m.userId})));
+      unitFleet = fleets.flat().map(asset=>({...asset,ownerCallsign:profiles.find(m=>m.userId===asset.ownerId)?.callsign||'UNIT ASSET'}));
+    }
+    return Response.json({mode:'BASE44_WEB_WALLET',notice:'Web Blacksite Credits and simulated rewards are separate from Discord LEDGER. No direct wallet bridge is configured.',profile,owned,equipment,logs,progress,claims,history,leaderboard,unitMembers,unitFleet,unitOps,announcements:announcements.filter(x=>x.active),catalog:{assets:ASSETS,mods:MODS,weapons:WEAPONS,contracts:CONTRACTS},now:new Date().toISOString()});
   } catch(err) { return Response.json({error: String(err?.message||err)},{status:500}); }
 });

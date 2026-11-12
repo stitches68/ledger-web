@@ -36,9 +36,26 @@ Deno.serve(async function(req){
     if(!p) return Response.json({error:'Open the terminal first to create your web dossier.'},{status:400});
     const a=await req.json();const type=String(a.type||'');
     if(type==='profile') {
-      const patch={callsign:clean(a.callsign,30)||p.callsign,specialty:clean(a.specialty,50),motto:clean(a.motto,100),bio:clean(a.bio,350),accent:hex(a.accent)};
+      const patch={};
+      if(a.callsign!==undefined)patch.callsign=clean(a.callsign,30)||p.callsign;
+      if(a.specialty!==undefined)patch.specialty=clean(a.specialty,50);
+      if(a.motto!==undefined)patch.motto=clean(a.motto,100);
+      if(a.bio!==undefined)patch.bio=clean(a.bio,350);
+      if(a.accent!==undefined)patch.accent=hex(a.accent);
+      if(a.unit!==undefined){const unit=clean(a.unit,40);patch.unit=unit||'UNASSIGNED';}
       await db.ContractorProfile.update(p.id,patch);
       return Response.json({ok:true,message:'DOSSIER UPDATED'});
+    }
+    if(type==='link_balance'){
+      const identity=(await db.DiscordIdentity.filter({userId:u.id}))[0];
+      if(!identity) throw new Error('Connect your Discord account before linking a balance');
+      const amount=Math.trunc(Number(a.amount));
+      if(!Number.isSafeInteger(amount)||amount<0||amount>100000000) throw new Error('Enter a valid Discord balance');
+      const note=clean(a.note,120);
+      await db.ContractorProfile.update(p.id,{discordCredits:amount,discordBalanceStatus:'PENDING_VERIFICATION',discordBalanceSyncedAt:now(),discordBalanceNote:note});
+      const request=await db.AdminActionRequest.create({actorUserId:String(u.id),actorDiscordId:identity.discordId,kind:'balance_link',target:identity.discordId,
+        payload:{claimed:amount,note,discordCommand:'Verify claimed Discord wallet balance manually'},status:'NEEDS_DISCORD_ACTION',createdAt:now(),resolvedAt:'',note:''});
+      return Response.json({ok:true,request,message:'BALANCE LINK QUEUED FOR STAFF VERIFICATION. No Discord credits moved.'});
     }
     if(type==='purchase'){
       const item=getItem(a.id,a.kind);
@@ -106,6 +123,22 @@ Deno.serve(async function(req){
       await db.ContractProgress.update(progress.id,{status:'ABANDONED'});
       return Response.json({ok:true,message:'CONTRACT RETURNED TO THE BROKER'});
     }
+    if(type==='unit_accept'){
+      if(!p.unit||p.unit==='UNASSIGNED')throw new Error('Set a unit designation in your dossier first');
+      const c=CONTRACTS.find(x=>x.id===a.contractId);if(!c)throw new Error('Contract unavailable');
+      const active=await db.UnitOperation.filter({unit:p.unit,status:'ACTIVE'});
+      if(active.length)throw new Error('Your unit already has an active operation');
+      const record=await db.UnitOperation.create({unit:p.unit,contractId:c.id,completed:0,target:c.missionTarget,status:'ACTIVE',createdByUserId:String(u.id),createdAt:now(),completedAt:'',earned:0});
+      return Response.json({ok:true,record,message:'UNIT OPERATION ACTIVATED'});
+    }
+    if(type==='unit_abandon'){
+      const op=await db.UnitOperation.get(String(a.id||''));
+      if(!op||op.unit!==p.unit)throw new Error('Unit operation not found');
+      if(op.status!=='ACTIVE')throw new Error('Unit operation already closed');
+      if(String(op.createdByUserId)!==String(u.id))throw new Error('Only the operation creator can close it');
+      await db.UnitOperation.update(op.id,{status:'ABANDONED',completedAt:now()});
+      return Response.json({ok:true,message:'UNIT OPERATION CLOSED'});
+    }
     if(type==='settle'){
       const fleet=await db.OwnedAsset.filter({ownerId:u.id,status:'DEPLOYED'});
       let earned=0,missions=0;
@@ -140,6 +173,21 @@ Deno.serve(async function(req){
             await db.ContractProgress.update(active.id,{completed,status:'COMPLETED',earned:(active.earned||0)+c.baseReward});
             await credit(db,p,c.baseReward,'WEB_CONTRACT_COMPLETION',`${c.title} cycle ${active.cycle||1}`);
           }else await db.ContractProgress.update(active.id,{completed});
+        }
+      }
+      if(missions&&p.unit&&p.unit!=='UNASSIGNED'){
+        const unitOps=await db.UnitOperation.filter({unit:p.unit,status:'ACTIVE'});
+        const unitOp=unitOps[0];
+        if(unitOp){
+          const c=CONTRACTS.find(x=>x.id===unitOp.contractId);
+          if(c){
+            const target=unitOp.target||c.missionTarget;
+            const completed=Math.min(target,(unitOp.completed||0)+missions);
+            if(completed>=target){
+              await db.UnitOperation.update(unitOp.id,{completed,status:'COMPLETED',completedAt:now(),earned:(unitOp.earned||0)+c.baseReward});
+              await credit(db,p,c.baseReward,'UNIT_OPERATION_COMPLETION',`${p.unit} // ${c.title}`);
+            }else await db.UnitOperation.update(unitOp.id,{completed});
+          }
         }
       }
       return Response.json({ok:true,earned,missions,message:earned?`BROKER CLEARED ${earned} WEB CREDITS`:'No new patrol cycles yet.'});
