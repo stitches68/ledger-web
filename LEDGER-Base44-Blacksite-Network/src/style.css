@@ -138,3 +138,9 @@
 @media(max-width:900px){.credits-grid{grid-template-columns:1fr}.unit-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.link-form{grid-template-columns:1fr}}
 @media(max-width:700px){.unit-fleet-grid{grid-template-columns:1fr}.unit-roster-row{flex-wrap:wrap}.unit-roster-value,.unit-roster-kills{margin-left:52px}.unit-op-row{flex-wrap:wrap}}
 @media(max-width:520px){.unit-stats{grid-template-columns:1fr}}
+
+/* GALACTIC OPERATIONS — full-bleed command deck */
+.content.content-galaxy{padding:0;max-width:none}
+.content.content-galaxy>.section-head{padding:28px 26px 0}
+@media(max-width:1100px){.content.content-galaxy>.section-head{padding:20px 16px 0}}
+@media(max-width:700px){.content.content-galaxy>.section-head{padding:16px 12px 0}}

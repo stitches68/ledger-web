@@ -64,7 +64,14 @@
     },
     "xp": {
       "type": "number"
-    }
+    },
+    "level": { "type": "number" },
+    "crew": { "type": "number" },
+    "supplies": { "type": "number" },
+    "role": { "type": "string" },
+    "taskForceId": { "type": "string" },
+    "galacticSorties": { "type": "number" },
+    "lastMaintenanceAt": { "type": "string" }
   },
   "rls": {
     "create": false,

@@ -1,0 +1,42 @@
+{
+  "name": "GalacticDeployment",
+  "type": "object",
+  "properties": {
+    "ownerId": { "type": "string" },
+    "assetId": { "type": "string" },
+    "assetName": { "type": "string" },
+    "category": { "type": "string" },
+    "planetId": { "type": "string" },
+    "planetHash": { "type": "number" },
+    "planetName": { "type": "string" },
+    "sector": { "type": "string" },
+    "faction": { "type": "string" },
+    "taskForceId": { "type": "string" },
+    "missionType": { "type": "string" },
+    "status": { "type": "string" },
+    "departedAt": { "type": "string" },
+    "arrivesAt": { "type": "string" },
+    "deployedAt": { "type": "string" },
+    "recalledAt": { "type": "string" },
+    "settledThrough": { "type": "number" },
+    "settlementToken": { "type": "string" },
+    "cycleMinutes": { "type": "number" },
+    "risk": { "type": "number" },
+    "supplies": { "type": "number" },
+    "damage": { "type": "number" },
+    "xp": { "type": "number" },
+    "level": { "type": "number" },
+    "earned": { "type": "number" },
+    "sorties": { "type": "number" },
+    "rewardProjected": { "type": "number" },
+    "lastReportId": { "type": "string" },
+    "createdAt": { "type": "string" }
+  },
+  "rls": {
+    "create": false,
+    "read": { "data.ownerId": "{{user.id}}" },
+    "update": false,
+    "delete": false
+  },
+  "description": "LEDGER fictional galactic deployment. Server-written; settled idempotently by settlementToken."
+}

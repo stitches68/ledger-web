@@ -3,6 +3,12 @@
 | Feature | Current code | Live deployment status |
 |---|---|---|
 | Existing web hangar, ships, simulated credits, dossiers | Base44 implementation retained | Requires Base44 deployment and testing |
+| Live Helldivers 2 planetary data | `galaxy` function reads the community API (planets, campaigns, Major Order, DSS), 90s shared server cache, identifying headers | Requires outbound network access from Base44; feed can be `UNAVAILABLE` and never invents planets |
+| Sector map, search, zoom, layers | Original SVG tactical chart; positions and waypoints come from the community feed | Fully client-side; verified in preview |
+| LEDGER deployments and battles | Server-side `galaxyOps` engine with travel, 15-minute cycles, deterministic outcomes, task forces | Persists in Base44 entities; no official gameplay result |
+| Passive galactic rewards | Web wallet credits only, capped, idempotent settlement tokens, `PENDING_RECONCILIATION` | Never moves Discord LEDGER credits |
+| Autonomous progress while offline | `galaxyOps` state settles due operations on read; schedule an invocation for continuous offline progress | Scheduling must be configured on Base44 |
+| Galactic admin controls | Reward/economy config, fictional events, pause, cancel, hold report | Re-verifies the Discord moderator role on every call |
 | Discord identity | Real OAuth2 authorization-code **account linking** after Base44 login | Requires callback URL and OAuth app secrets |
 | Discord-only standalone login | **Not implemented** | Depends on supported Base44 custom auth/session provider |
 | Discord guild membership | Verified through the existing bot's REST API | Requires secret bot token and guild ID |

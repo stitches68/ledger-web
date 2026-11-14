@@ -59,6 +59,8 @@
     "completedContracts": {
       "type": "number"
     },
+    "galacticEarned": { "type": "number" },
+    "galacticSorties": { "type": "number" },
     "status": {
       "type": "string"
     }

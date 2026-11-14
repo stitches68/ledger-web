@@ -1,0 +1,23 @@
+{
+  "name": "GalacticOpsConfig",
+  "type": "object",
+  "properties": {
+    "key": { "type": "string" },
+    "rewardMultiplier": { "type": "number" },
+    "payoutCap": { "type": "number" },
+    "maintenanceRate": { "type": "number" },
+    "cycleMinutes": { "type": "number" },
+    "paused": { "type": "boolean" },
+    "season": { "type": "string" },
+    "modifiers": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+    "updatedAt": { "type": "string" },
+    "updatedByDiscordId": { "type": "string" }
+  },
+  "rls": {
+    "create": false,
+    "read": true,
+    "update": false,
+    "delete": false
+  },
+  "description": "Staff-tuned galactic simulation economy. Readable for transparency; writes only through verified admin actions."
+}

@@ -8,6 +8,12 @@ The existing Discord LEDGER bot is **unchanged**. Real Discord credit balances a
 
 This project is a functional implementation starter, not a claim of a published/production-tested Base44 app. You must authenticate, deploy and test on your own Base44 account. See `docs/INTEGRATION_TRUTH.md` for limits and security caveats.
 
+## Galactic Operations
+
+The **Galactic Operations** page is a working tactical war chart built on the community Helldivers 2 API, with LEDGER's own persistent fleet simulation layered over it: deployments, autonomous battles, after-action reports, task forces, refits and web-only rewards. Live war data is cached server-side and always labelled `LIVE`, `CACHED` or `UNAVAILABLE`; fictional LEDGER activity never changes the real war.
+
+Read **`docs/GALACTIC_OPERATIONS.md`** for the feed contract, caching, settlement idempotency, reward/reconciliation rules, admin verification and the verification checklist.
+
 ## Discord-linked website update
 
 This build adds **Discord account linking**, live read-only mirrors of LEDGER's contract/leaderboard/shop Discord posts, server-enforced LEDGER moderator role gating, a staff console for website announcements, and a manual Discord action queue. **No change to the existing Discord bot code is required.**

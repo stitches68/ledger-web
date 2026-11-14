@@ -1,0 +1,21 @@
+{
+  "name": "GalacticTaskForce",
+  "type": "object",
+  "properties": {
+    "ownerId": { "type": "string" },
+    "name": { "type": "string" },
+    "doctrine": { "type": "string" },
+    "assetIds": { "type": "array", "items": { "type": "string" } },
+    "homePlanetId": { "type": "string" },
+    "active": { "type": "boolean" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "rls": {
+    "create": false,
+    "read": { "data.ownerId": "{{user.id}}" },
+    "update": false,
+    "delete": false
+  },
+  "description": "Contractor-owned task force grouping. Never readable or writable by other contractors."
+}

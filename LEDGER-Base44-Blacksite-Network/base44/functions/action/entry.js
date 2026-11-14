@@ -143,6 +143,9 @@ Deno.serve(async function(req){
       const fleet=await db.OwnedAsset.filter({ownerId:u.id,status:'DEPLOYED'});
       let earned=0,missions=0;
       for(const ship of fleet){
+        // Galactic Operations deployments settle in galaxyOps; never pay patrol income twice.
+        const galactic=(await db.GalacticDeployment.filter({assetId:ship.id,status:'ACTIVE'}));
+        if(galactic.length)continue;
         const start=Date.parse(ship.lastTickAt||now());const elapsed=Number.isFinite(start)?Math.max(0,Math.floor((Date.now()-start)/1800000)):0;
         const ticks=Math.min(elapsed,48);
         if(!ticks)continue;

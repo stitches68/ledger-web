@@ -1,0 +1,102 @@
+{
+  "name": "GalacticBattleReport",
+  "type": "object",
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "deploymentId": {
+      "type": "string"
+    },
+    "assetId": {
+      "type": "string"
+    },
+    "assetName": {
+      "type": "string"
+    },
+    "planetId": {
+      "type": "string"
+    },
+    "planetName": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "faction": {
+      "type": "string"
+    },
+    "missionType": {
+      "type": "string"
+    },
+    "settlementKey": {
+      "type": "string"
+    },
+    "fromTick": {
+      "type": "number"
+    },
+    "toTick": {
+      "type": "number"
+    },
+    "cycles": {
+      "type": "number"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "narrative": {
+      "type": "string"
+    },
+    "reward": {
+      "type": "number"
+    },
+    "maintenance": {
+      "type": "number"
+    },
+    "net": {
+      "type": "number"
+    },
+    "salvage": {
+      "type": "number"
+    },
+    "damage": {
+      "type": "number"
+    },
+    "xp": {
+      "type": "number"
+    },
+    "casualties": {
+      "type": "number"
+    },
+    "suppliesUsed": {
+      "type": "number"
+    },
+    "reconciliationStatus": {
+      "type": "string"
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acknowledged": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "create": false,
+    "read": {
+      "data.ownerId": "{{user.id}}"
+    },
+    "update": false,
+    "delete": false
+  },
+  "description": "Immutable after-action report for a simulated LEDGER operation. Rewards are web-only and await reconciliation."
+}

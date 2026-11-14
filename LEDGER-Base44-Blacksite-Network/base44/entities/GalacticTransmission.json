@@ -1,0 +1,21 @@
+{
+  "name": "GalacticTransmission",
+  "type": "object",
+  "properties": {
+    "ownerId": { "type": "string" },
+    "kind": { "type": "string" },
+    "severity": { "type": "string" },
+    "callsign": { "type": "string" },
+    "body": { "type": "string" },
+    "planetId": { "type": "string" },
+    "deploymentId": { "type": "string" },
+    "createdAt": { "type": "string" }
+  },
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  },
+  "description": "Blacksite dispatch traffic generated server-side from simulation events."
+}
